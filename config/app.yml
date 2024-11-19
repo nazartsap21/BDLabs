@@ -1,0 +1,2 @@
+db:
+  uri: 'mysql://root:root@localhost/accuweather'
