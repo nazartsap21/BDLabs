@@ -1,2 +1,2 @@
 db:
-  uri: 'mysql://root:root@localhost/accuweather'
+  uri: 'mysql://root:1111@localhost/accuweather'

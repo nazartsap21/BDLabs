@@ -1,12 +1,14 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flasgger import Swagger
 import yaml
 
 db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
+    swagger = Swagger(app)
     config_path = os.path.join(os.path.dirname(__file__), '../config/app.yml')
     with open(config_path, 'r') as config_file:
         config = yaml.safe_load(config_file)
