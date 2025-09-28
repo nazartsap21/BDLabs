@@ -25,7 +25,7 @@ jobs:
       - name: Deploy
         run: |
           ssh -i ~/.ssh/github-actions-key -o StrictHostKeyChecking=no admin@${{ secrets.EC2_HOST }} << 'EOF'
-          cd /BDLabs
+          cd ./BDLabs
           git pull origin main
           sudo docker build -t lab1:${{ github.sha }} .
           sudo docker stop lab1_app || true
