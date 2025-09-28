@@ -16,10 +16,10 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2-key.pem
-          chmod 600 ~/.ssh/ec2-key.pem
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/github-actions-key
+          chmod 600 ~/.ssh/github-actions-key
           eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/ec2-key.pem
+          ssh-add ~/.ssh/github-actions-key
 
       - name: Deploy
         run: |
