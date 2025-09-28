@@ -22,7 +22,7 @@ jobs:
           ssh-add ~/.ssh/github-actions-key
           ssh-add -l
       - name: Test SSH connection
-        run: ssh -vvv -o StrictHostKeyChecking=no admin@${{ secrets.EC2_HOST }} "echo 'SSH connection successful'"
+        run: ssh -i ~/.ssh/github-actions-key -o StrictHostKeyChecking=no admin@${{ secrets.EC2_HOST }} "echo 'SSH connection successful'"
 
       - name: Deploy
         run: |
