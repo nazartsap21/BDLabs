@@ -21,6 +21,9 @@ jobs:
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/github-actions-key
 
+      - name: Debug SSH keys
+        run: ssh-add -l
+
       - name: Deploy
         run: |
           ssh -o StrictHostKeyChecking=no admin@${{ secrets.EC2_HOST }} << 'EOF'
