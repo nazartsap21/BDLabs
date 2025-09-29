@@ -60,7 +60,7 @@ def create_cataclysm_route():
     'tags': ['Cataclysms'],
     'responses': {
         200: {
-            'description': 'A list of cataclysms',
+            'description': 'List of cataclysms',
             'schema': {
                 'type': 'array',
                 'items': {
