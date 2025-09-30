@@ -127,7 +127,7 @@ def get_cataclysm_route(id):
             'in': 'path',
             'type': 'integer',
             'required': True,
-            'description': 'ID of the cataclysm to update'
+            'description': 'ID of cataclysm to update'
         },
         {
             'name': 'body',
